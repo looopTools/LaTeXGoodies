@@ -1,0 +1,25 @@
+ %Make a listing-style. This one is made for C#, size is footnotesize, keywords are blue-ish and fat, strings are purple-ish, comments are green-ish and kursive, caption is placed at the bottom, tabulator-size is 3, the listing is surrounded by a single frame, the frame has a shadowbox, the shadow is black, and whenever the symbols used in 'escapeinside' is used, whatever is written I'm between can contain latex code (E.g. such as vertical dots).
+\lstdefinestyle{programmingLanguageListingCSharp}
+ {
+	language = [Sharp]C,
+        breaklines=true,
+	float=ht, %Prevents breaks in the listing. h=here, b=bottom, t=top, p=pageOfItsOwn, I think htbp, does 'h' first, then 't' etc.
+	basicstyle=\ssmall, 	%Is a size between \tiny and \scriptsize. From the 'moresize' package
+	numbers=left,                   % where to put the line-numbers. Options: none, left, right
+	%numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+	%stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
+	%numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{yellow!25},      % choose the background color. You must add \usepackage{color}
+	%keywordstyle=\color[rgb]{0.627,0.126,0.941}\bfseries, 		% Eclipse colors (Purple-ish)
+	%stringstyle=\color[rgb]{0.06, 0.10, 0.98}, 					% Eclipse colors (Blue-ish)
+	%commentstyle=\color[rgb]{0.12, 0.38, 0.18}\bfseries\itshape, 	% Eclipse colors (Green-ish)
+	keywordstyle=\color[rgb]{0,0,0.95}\bfseries, 				% MonoDevelop Colors
+	stringstyle=\color[rgb]{0.627,0.126,0.941}\bfseries, 			% MonoDevelop Colors
+	commentstyle=\color[rgb]{0.12, 0.48, 0.18}\bfseries\itshape, 	% MonoDevelop Colors
+	captionpos=b, tabsize=3,
+	frame=lines,
+	%frame=shadowbox,
+	rulesepcolor=\color{black},
+	morekeywords={Vector3, Vector2},	%Extra keywords
+	escapeinside={(*@}{@*)}	%Enter latex code when when the first symbols appear in that order, and end latex code when the last symbols appear.
+}
